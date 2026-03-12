@@ -1,0 +1,61 @@
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #111; /* Noir */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.contact-container h2 {
+  color: #FFD700; /* Jaune doré */
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+/* --- Formulaire --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #222;
+  color: #f5f5f5;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #FFD700;
+  outline: none;
+}
+
+.contact-form button {
+  background: #000;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #FFD700;
+  color: #000;
+}

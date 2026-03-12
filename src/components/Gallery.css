@@ -1,0 +1,839 @@
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  margin-bottom: 25px;
+  color: #FFD700;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.filter-bar {
+  margin: 20px 0 35px 0;
+  display: flex;
+  justify-content: center; /* bien centré */
+}
+
+.filter-bar select {
+  min-width: 260px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  background: #000;
+  color: #FFD700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.filter-bar select:hover {
+  background: #FFD700;
+  color: #000;
+}
+
+
+/* --- Grille galerie --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* --- Cartes --- */
+.art-card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  color: #f5f5f5;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* Animation visible au scroll */
+.art-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hover */
+.art-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+.art-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.art-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.art-card .artist {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.art-card .size {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.art-card .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 12px;
+}
+
+/* --- Boutons --- */
+.art-card button {
+  background: #000;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.art-card button:hover {
+  background: #FFD700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+.art-card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #f5f5f5;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+.art-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.art-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.art-card .size {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.art-card .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 12px;
+}
+
+.art-card button {
+  background: #000; /* ✅ Noir */
+  color: #FFD700;   /* ✅ Jaune */
+  border: 2px solid #FFD700;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.art-card button:hover {
+  background: #FFD700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* --- Pagination --- */
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination button {
+  background: #000;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination button:hover {
+  background: #FFD700;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.pagination button:disabled {
+  background: #333;
+  border: 2px solid #555;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+select {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.artist-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.artist-info img {
+  width: 200px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+.artwork {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.art-item {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.art-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.art-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.art-item h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.art-item p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.art-item button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.art-item button:hover {
+  background: #0a0a0a;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  margin-bottom: 25px;
+  color: #ffcc00;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.art-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.art-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.art-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.art-card .size {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.art-card .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.art-card button {
+  background: #000; /* Noir */
+  color: #FFD700;   /* Jaune */
+  border: 2px solid #FFD700;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.art-card button:hover {
+  background: #FFD700; /* Jaune */
+  color: #000;         /* Noir */
+}
+
+
+/* --- Pagination --- */
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* --- Effet bouton Ajouter au panier --- */
+.art-card button:active {
+  transform: scale(0.95);
+}
+
+/* Classe d'animation */
+.added {
+  animation: flash 0.5s ease;
+}
+
+/* Animation flash doré */
+@keyframes flash {
+  0%   { background-color: #ffcc00; }
+  50%  { background-color: #ffcc00; color: #333; }
+  100% { background-color: #ffcc00; color: white; }
+}
+
+/* --- Toast message --- */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffcc00;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+  animation: fadeInOut 2s ease;
+  z-index: 2000;
+}
+
+/* Animation d’apparition/disparition */
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  90%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* --- Animation des cartes --- */
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.art-card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #f5f5f5;
+
+  /* --- Animation --- */
+  animation: fadeZoom 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Petits décalages pour éviter que toutes apparaissent en même temps */
+.art-card:nth-child(1) { animation-delay: 0.1s; }
+.art-card:nth-child(2) { animation-delay: 0.2s; }
+.art-card:nth-child(3) { animation-delay: 0.3s; }
+.art-card:nth-child(4) { animation-delay: 0.4s; }
+.art-card:nth-child(5) { animation-delay: 0.5s; }
+.art-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* --- Effet hover existant --- */
+.art-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Fiche artiste --- */
+.artist-info {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  color: #FFD700;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards; /* effet apparition */
+}
+
+.artist-info img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FFD700;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* --- Animation fade-in --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Grille galerie --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* --- Carte oeuvre --- */
+.art-card {
+  background: #111;
+  border: 2px solid #FFD700; /* ✅ cadre doré */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  color: #f5f5f5;
+  text-align: center;
+
+  /* Animation d'apparition */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInCard 0.8s forwards;
+}
+
+/* --- Animation keyframes --- */
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Image --- */
+.art-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 2px solid #FFD700; /* ✅ cadre doré */
+}
+
+/* --- Texte --- */
+.art-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.art-card .size {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+.art-card .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 12px;
+}
+
+/* --- Bouton --- */
+.art-card button {
+  background: #000;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.art-card button:hover {
+  background: #FFD700;
+  color: #000;
+  transform: scale(1.08);
+}
+
+/* --- Effet halo au survol de la carte --- */
+.art-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* --- Animation en cascade pour les cartes --- */
+.art-card {
+  animation: fadeInCard 0.8s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Les cartes suivantes ont un délai d’animation plus long */
+.art-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.art-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.art-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.art-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.art-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.art-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* --- Animation keyframes déjà définie --- */
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Bloc infos artiste --- */
+.artist-info {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  color: #FFD700;
+}
+
+/* Photo artiste */
+.artist-info img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FFD700;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+
+  /* Animation photo */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.1s;
+}
+
+/* Texte artiste */
+.artist-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #FFD700;
+
+  /* Animation texte */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.4s; /* petit délai après la photo */
+}
+
+/* --- Animation keyframes réutilisée --- */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Transition d’apparition/disparition artiste --- */
+.artist-info {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  color: #FFD700;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Effet sortie quand on change d’artiste */
+.artist-info-exit {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-out;
+}
+
+.artist-info-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* --- Modale zoom --- */
+.modal {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease; /* animation apparition */
+}
+
+.modal-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 80%;
+  max-height: 80%;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 20px #FFD700;
+  position: relative;
+  animation: zoomIn 0.4s ease; /* animation zoom */
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 60vh;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFD700;
+  cursor: pointer;
+}
+
+/* --- MODAL ZOOM --- */
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  cursor: zoom-out;
+  animation: fadeIn 0.3s ease;
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid #FFD700;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.zoomed-image:hover {
+  transform: scale(1.02);
+}
+
+.zoom-modal.closing {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.9); }
+}
+
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+
+/* Applique le zoomIn normalement */
+.modal-content {
+  animation: zoomIn 0.4s ease forwards;
+}
+
+/* Quand on ferme → zoomOut */
+.modal-content.closing {
+  animation: zoomOut 0.4s ease forwards;
+}

@@ -1,0 +1,24 @@
+.home-container {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 80vh; /* occupe presque toute la hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centre verticalement */
+  align-items: center; /* centre horizontalement */
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: #FFD700; /* jaune doré */
+  margin-bottom: 30px;
+}
+
+.home-speech {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #FFD700 !important; /* force le jaune */
+}
+

@@ -1,0 +1,255 @@
+/* 🌟 STYLE GLOBAL DU SITE */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #8B0000;
+  color: #FFD700;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: #FFD700;
+  text-align: center;
+  margin: 20px 0;
+}
+
+p {
+  color: white;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 🌈 NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #8B0000;
+  padding: 15px 40px;
+  border-bottom: 3px solid #FFD700;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo + titre à gauche */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo */
+.logo {
+  height: 130px;
+  width: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+}
+
+/* Nom du site */
+.site-title {
+  color: #FFD700;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Liens de navigation */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* 🌟 CONTENU PRINCIPAL */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* 🌆 GALERIE (structure de base) */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filter-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-bar select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background: black;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.art-card {
+  background: #222;
+  border: 2px solid #FFD700;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.art-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.art-card button {
+  background: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.art-card button:hover {
+  background: white;
+  color: black;
+}
+
+/* 🌈 PANIER */
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #FFD700;
+  color: white;
+}
+
+.cart-container h2 {
+  color: #FFD700;
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.cart-container button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-container button:hover {
+  background: darkred;
+}
+
+.checkout-btn {
+  background: #FFD700;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✉️ CONTACT */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #222;
+  border-radius: 12px;
+  border: 2px solid #FFD700;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  background: #000;
+  color: white;
+}
+
+.contact-container button {
+  background: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-container button:hover {
+  background: white;
+}
+
+/* 🖤 FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  background: black;
+  color: #FFD700;
+  border-top: 2px solid #FFD700;
+  font-size: 0.9rem;
+}
